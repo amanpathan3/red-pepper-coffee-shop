@@ -1,0 +1,111 @@
+/* Coffee Shop Footer */
+
+.coffee-footer {
+  background-color: #3b2f2f; /* deep coffee brown */
+  color: #f5e6cc; /* creamy beige text */
+  padding: 40px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.footer-brand {
+  flex: 1 1 250px;
+  text-align: center;
+}
+
+.footer-logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.footer-title {
+  font-size: 22px;
+  margin-bottom: 6px;
+  color: #ffdd99;
+}
+
+.footer-tagline {
+  font-style: italic;
+  font-size: 14px;
+  color: #f0e3d0;
+}
+
+.footer-links,
+.footer-contact,
+.footer-social {
+  flex: 1 1 200px;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #ffdd99;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #f5e6cc;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ffdd99;
+}
+
+.footer-contact p {
+  margin: 6px 0;
+  color: #f5e6cc;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #5a4747;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #f0e3d0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

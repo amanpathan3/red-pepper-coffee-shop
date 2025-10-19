@@ -1,0 +1,83 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3e2723; /* Coffee brown */
+  padding: 15px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* === Logo === */
+.logo img {
+  height: 50px;
+  border: 2px solid #3e2723;
+  transition: 0.4s ease-in;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+} 
+
+/* === Nav Links === */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #f8ede3;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* === Hover Effect === */
+.nav-links a:hover {
+  color: #ffb74d; /* Warm golden hover */
+}
+
+/* === Underline Animation === */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #ffb74d;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* === Responsive for Mobile === */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 25px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    margin-top: 10px;
+  }
+}
+
+.shop-logo{
+  text-decoration: none;
+}

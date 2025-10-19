@@ -1,0 +1,120 @@
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto;
+}
+
+/* === Input Field === */
+.search-bar input {
+  padding: 12px 23px;              /* bigger input box */
+  width: 350px;                    /* wider size */
+  border: 1px solid #bca68c;       /* soft border */
+  border-radius: 6px;
+  font-size: 1.05rem;
+  background-color:#fff8f0;      /* light beige coffee tone */
+  color: #3e2723;                  /* dark coffee text */
+  outline: none;
+}
+
+.search-bar input:focus {
+  border-color: #a67c52;           /* darker border on focus */
+  background-color: #fff8f0;      /* slightly darker beige on focus */
+}
+
+/* === Button === */
+.search-bar button {
+  padding: 12px 20px;
+  background-color: #a67c52;       /* coffee brown */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.search-bar button:hover {
+  background-color: #8b5e34;       /* darker coffee tone */
+}
+
+.no-products {
+  text-align: center;
+  color: #888;
+  margin-top: 40px;
+  font-size: 1.3rem;
+}
+
+
+/* Container: Flexible for multiple cards */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Product Card */
+.product-card {
+  border-radius: 15px;
+  padding: 15px;
+  width: 220px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+/* Hover effect only on the card */
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* Product Image */
+.product-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Product Text */
+.product-name {
+  margin: 10px 0 5px;
+  font-size: 18px;
+  color: #3b2f2f;
+}
+
+.rating {
+  color: #ffb400;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.quantity {
+  font-size: 14px;
+  color: #555;
+  margin: 3px 0;
+}
+
+.price {
+  font-weight: bold;
+  color: #d2691e;
+  margin: 5px 0;
+}
+
+/* Button */
+.product-btn {
+  background-color: #6f4e37;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+.product-link{
+  text-decoration: none;
+}

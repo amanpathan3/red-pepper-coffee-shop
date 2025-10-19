@@ -1,0 +1,18 @@
+.contact-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 400px;
+    width: 500px;
+    border: 2px solid black;
+}
+
+.input-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-form input , .input-form label, .input-form button{
+    margin-top: 10px;
+}
