@@ -1,26 +1,37 @@
 import { Header } from "../Components/Header";
 import { Footer } from "../Components/Footer";
-import { products } from "./products";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./HomePage.css";
 
 export function HomePage() {
-  const [ListOfProduct, setListOfProduct] = useState(products);
-  const [Search, setSearch] = useState("");
+  const [listOfProduct, setListOfProduct] = useState([]); 
+  const [allProducts, setAllProducts] = useState([]); 
+  const [search, setSearch] = useState("");
 
-  function searchProduct() {
-    if (Search.trim() === "") {
-    setListOfProduct(products);
-    return; // Exit the function early
+  const fetchProducts = async () => {
+      const response = await fetch("http://localhost:5000/products");
+      const data = await response.json();
+      setListOfProduct(data);
+      setAllProducts(data); 
+  };
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  const searchProduct = () => {
+    if (search.trim() === "") {
+      setListOfProduct(allProducts); 
+      return;
     }
-    // Filter the products based on the search query
-    const filteredProducts = products.filter((res) =>
-      res.name.toLowerCase().includes(Search.toLowerCase())
+
+    const filteredProducts = allProducts.filter((product) =>
+      product.name.toLowerCase().includes(search.toLowerCase())
     );
 
     setListOfProduct(filteredProducts);
-  }
+  };
 
   return (
     <>
@@ -30,14 +41,16 @@ export function HomePage() {
         <input
           type="text"
           placeholder="Search the products"
+          value={search} 
           onChange={(e) => setSearch(e.target.value)}
         />
         <button onClick={searchProduct}>Search</button>
       </div>
+
       <div className="product-container">
-        {ListOfProduct.length > 0 ? (
-            ListOfProduct.map((product) => (
-             <Link key={product.id} to={`/productdetails/${product.id}`} className="product-link">
+        {listOfProduct.length > 0 ? (
+          listOfProduct.map((product) => (
+            <Link key={product.id} to={`/productdetails/${product.id}`} className="product-link">
               <div className="product-card">
                 <img src={product.image} alt={product.name} className="product-img" />
                 <h3 className="product-name">{product.name}</h3>
@@ -49,7 +62,6 @@ export function HomePage() {
             </Link>
           ))
         ) : (
-          // 👇 This message shows if no products match the search
           <h2 className="no-products">No products found 😕</h2>
         )}
       </div>
