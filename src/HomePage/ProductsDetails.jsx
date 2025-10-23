@@ -1,3 +1,4 @@
+import { Footer } from "../Components/Footer";
 import { Header } from "../Components/Header";
 import { products } from "./products";
 import { useParams, Link } from "react-router-dom";
@@ -21,6 +22,7 @@ export function ProductDetails(){
                 <button className="product-btn">Buy</button>
                 </div>
             </div>
+            <Footer />
         </>
     );
 }
