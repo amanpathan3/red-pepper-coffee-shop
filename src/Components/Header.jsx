@@ -11,7 +11,6 @@ export function Header(){
             <div>
                 <ul className="nav-links">
                     <li><Link to="/">Home</Link></li>
-                    <li><Link to="#">Menu</Link></li>
                     <li><Link to="/orders">Order</Link></li>  
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
