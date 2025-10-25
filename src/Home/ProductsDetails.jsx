@@ -21,6 +21,27 @@ export function ProductDetails() {
     const { id } = useParams();
     const product = products.find((p) => p.id === Number(id));
 
+
+    const handleBuy = async () => {
+  try {
+    const response = await fetch("http://localhost:5000/orders", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(product), // send current product
+    });
+
+    if (response.ok) {
+      alert("Order placed successfully!");
+    } else {
+      alert("Failed to place order.");
+    }
+  } catch (error) {
+    console.error("Error placing order:", error);
+    alert("Error placing order.");
+  }
+};
+
+
     if (!product) {
         return (<h2>Not</h2>);
     }
@@ -34,7 +55,7 @@ export function ProductDetails() {
                     <p className="rating">⭐ {product.rating}</p>
                     <p className="quantity">Quantity: {product.quantity}</p>
                     <p className="price">₹{product.price}</p>
-                    <button className="product-btn">Buy</button>
+                    <button className="product-btn" onClick={handleBuy}>Buy</button>
                 </div>
             </div>
             <Footer />
