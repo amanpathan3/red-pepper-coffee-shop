@@ -1,0 +1,103 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("../../public/Images/login-signup-bg.avif")
+    no-repeat center center/cover;
+  font-family: "Poppins", sans-serif;
+}
+
+.auth-box {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+}
+
+.auth-box h2 {
+  color: #3e2723;
+  margin-bottom: 25px;
+}
+
+.auth-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-box input {
+  margin: 10px 0;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.auth-box input:focus {
+  border-color: #795548;
+  box-shadow: 0 0 5px rgba(121, 85, 72, 0.5);
+}
+
+.auth-box button {
+  background-color: #6d4c41;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.auth-box button:hover {
+  background-color: #4e342e;
+}
+
+.auth-box p {
+  margin-top: 15px;
+  color: #3e2723;
+  font-size: 14px;
+}
+
+.auth-box a {
+  color: #6d4c41;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-box a:hover {
+  text-decoration: underline;
+}
+
+
+/* 👁️ Password Eye Feature */
+.password-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-field input {
+  width: 100%;
+  padding-right: 40px; /* space for the eye icon */
+}
+
+.toggle-eye {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 18px;
+  color: #6d4c41;
+  transition: 0.3s;
+}
+
+.toggle-eye:hover {
+  color: #4e342e;
+  transform: scale(1.1);
+}
