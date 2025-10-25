@@ -7,31 +7,51 @@ export function AboutPage() {
   return (
     <>
       <Header />
-      <div className="about-container">
-        <div className="about-content">
-          <h1>About Our Coffee Shop ☕</h1>
-          <p>
-            Welcome to <strong>Café Aroma</strong> — where every cup tells a story!
-            We’re passionate about crafting the perfect brew, using freshly roasted
-            beans and the finest ingredients sourced from local farms.
-          </p>
 
-          <p>
-            Our journey began with a simple dream — to bring people together over a
-            warm cup of coffee. Whether you’re here to work, relax, or catch up with
-            friends, we’ve created a cozy space that feels like home.
-          </p>
+      {/* Hero Section */}
+      <section className="about-hero">
+        <h1>Welcome to Red Pepper Cafe</h1>
+        <p>Where every cup tells a story ☕</p>
+      </section>
 
+      {/* Info Cards Section */}
+      <section className="about-cards">
+        <div className="card">
+          <img
+            src="../../public/Images/about-card-1.avif"
+            alt="Our Story"
+          />
+          <h3>Our Story</h3>
           <p>
-            From cappuccinos to cold brews, our skilled baristas put heart into every
-            pour. Thank you for being part of our story!
+            Started as a small cafe with a big dream, we focus on crafting perfect coffee
+            experiences for everyone.
           </p>
-
-          <div className="about-image">
-            <img src="../../public/Images/about-coffee.jpg" alt="Coffee Shop" />
-          </div>
         </div>
-      </div>
+
+        <div className="card">
+          <img
+            src="../../public/Images/about-card-2.avif"
+            alt="Our Mission"
+          />
+          <h3>Our Mission</h3>
+          <p>
+            To serve ethically sourced, high-quality coffee in a cozy environment that
+            feels like home.
+          </p>
+        </div>
+
+        <div className="card">
+          <img
+            src="../../public/Images/about-card-3.avif"
+            alt="Our Promise"
+          />
+          <h3>Our Promise</h3>
+          <p>
+            Sustainability, community, and exceptional coffee are at the heart of everything
+            we do.
+          </p>
+        </div>
+      </section>
       <Footer />
     </>
   );
